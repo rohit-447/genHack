@@ -1,2 +1,6 @@
-# Use a modern, stable Node.js runtime
 runtime: nodejs20
+
+env_variables:
+  MONGO_URI: "your_mongodb_connection_string_here"
+  JWT_SECRET: "your_super_secret_key_here"
+  # Add any other variables your app needs
