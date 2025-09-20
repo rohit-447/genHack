@@ -13,7 +13,7 @@ const server= createServer(app)
 // console.log(process.env.GEMINI_API_KEY)
 
 app.use(cors({
-    origin: ["http://localhost:5173", "https://legaldocasis.web.app/"],
+    origin: ["http://localhost:5173", "https://legaldocasis.web.app"],
     credentials: true
 }))
 
