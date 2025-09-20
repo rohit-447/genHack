@@ -62,7 +62,9 @@ export default function MiddleSection({ simpleEnglish, setData }) {
         // Add user message to chat UI
         setMessages((prev) => [...prev, { role: "human", content: query }]);
 
-        const response = await axios.post("https://genaibackend.el.r.appspot.com/chat", {
+        const response = await axios.post(
+          //backend url
+          "https://genaibackend.el.r.appspot.com/chat", {
           query,
           history,
           context,
