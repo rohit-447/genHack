@@ -37,7 +37,8 @@ export default function MiddleSection({ simpleEnglish, setData }) {
         formData.append("file", selectedFile);
 
         const response = await axios.post(
-          "http://localhost:4000/upload",
+          // "http://localhost:4000/upload",
+          "https://genaibackend.el.r.appspot.com/upload",
           formData,
           { headers: { "Content-Type": "multipart/form-data" } }
         );
@@ -61,7 +62,7 @@ export default function MiddleSection({ simpleEnglish, setData }) {
         // Add user message to chat UI
         setMessages((prev) => [...prev, { role: "human", content: query }]);
 
-        const response = await axios.post("http://localhost:4000/chat", {
+        const response = await axios.post("https://genaibackend.el.r.appspot.com/chat", {
           query,
           history,
           context,
